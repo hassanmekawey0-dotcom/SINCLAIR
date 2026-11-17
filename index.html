@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SINCLAIR</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            background:
+                radial-gradient(
+                    ellipse at 50% 42%,
+                    rgba(90, 90, 105, 0.25) 0%,
+                    rgba(40, 40, 48, 0.15) 35%,
+                    transparent 70%
+                ),
+                linear-gradient(
+                    135deg,
+                    #08080a 0%,
+                    #19191f 50%,
+                    #050506 100%
+                );
+            font-family: Arial, sans-serif;
+        }
+
+        /* Soft light behind the logo */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 550px;
+            height: 550px;
+            border-radius: 50%;
+            background: radial-gradient(
+                circle,
+                rgba(220, 220, 235, 0.12) 0%,
+                rgba(160, 160, 175, 0.05) 35%,
+                transparent 70%
+            );
+            filter: blur(45px);
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        /* Subtle ambient shine */
+        body::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                115deg,
+                transparent 25%,
+                rgba(255, 255, 255, 0.025) 48%,
+                transparent 70%
+            );
+            pointer-events: none;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 38px;
+            padding: 24px;
+        }
+
+        .logo {
+            width: 260px;
+            max-width: 75vw;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.12));
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .social-links a {
+            min-width: 125px;
+            padding: 13px 24px;
+            text-align: center;
+            text-decoration: none;
+            color: #eeeeee;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 2px;
+            background: rgba(255, 255, 255, 0.025);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: rgba(255, 255, 255, 0.10);
+            border-color: rgba(255, 255, 255, 0.65);
+            box-shadow: 0 0 22px rgba(255, 255, 255, 0.08);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                width: 220px;
+            }
+
+            .container {
+                gap: 30px;
+            }
+
+            .social-links {
+                gap: 10px;
+            }
+
+            .social-links a {
+                min-width: 110px;
+                padding: 12px 16px;
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <img
+            class="logo"
+    src="./images/sanclair.png"
+            alt="sanclair"
+        >
+
+        <div class="social-links">
+
+            <a
+                href="https://www.instagram.com/mailuma.egy?exln=MXdobncyb2RtdmxnZQ=="
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                INSTAGRAM
+            </a>
+
+            <a
+                href="https://www.facebook.com/share/p/1Hnr3b3d9p/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                FACEBOOK
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
